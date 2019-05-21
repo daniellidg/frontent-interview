@@ -1,63 +1,86 @@
-## JS 问题
-- [介绍JS的基本数据类型](#介绍js的基本数据类型)
-- [介绍JS有哪些内置对象](#介绍js有哪些内置对象)
-- [宿主对象和原生对象的区别](#宿主对象和原生对象的区别)
-- [null、undefined及未声明变量之间的区别。如何区分？](#nullundefined及未声明变量之间的区别如何区分)
-- [\==和===的区别](#\和的区别)
-- [JS隐式转换及应用场景](#js隐式转换及应用场景)
-- ["Attribute"和"Property"的区别](#attribute和property的区别)
-- [NaN是什么？如何判断是否是NaN类型](#nan是什么如何判断是否是nan类型)
-- [如何判断两个对象相等](#如何判断两个对象相等)
-- [什么是'user strict'，使用它有什么优缺点？](#什么是user-strict使用它有什么优缺点)
-- [call和apply的作用是什么？两者区别是什么？](#call和apply的作用是什么两者区别是什么)
-- [请说明Function.prototype.bind的用法](#请说明functionprototypebind的用法)
-- [如何判断是否为空数组](#如何判断是否为空数组)
-- [数组方法](#数组方法)
-- [push、pop、shift、unshift功能及返回值](#pushpopshiftunshift功能及返回值)
-- [.forEach和.map()循环的主要区别，使用场景举例](#foreach和map循环的主要区别使用场景举例)
-- [JS执行对象查找时，永远不会去查找原型的函数是哪个？](#js执行对象查找时永远不会去查找原型的函数是哪个)
-- [如何将arguments转为数组](#如何将arguments转为数组)
-- [对象的遍历方法](#对象的遍历方法)
-- [数组的遍历方法](#数组的遍历方法)
-- [匿名函数的典型应用场景](#匿名函数的典型应用场景)
-- [IIFE(立即执行函数)的用法](#iife立即执行函数的用法)
-- [document的load事件和DOMContentLoaded事件之间的区别](#document的load事件和domcontentloaded事件之间的区别)
-- [数据类型判断方式有几种](#数据类型判断方式有几种)
-- [DOM操作(增删改查)](#dom操作增删改查)
-- [异步加载JS 的方式有哪些](#异步加载js-的方式有哪些)
-- [document.write和innerHTML有何区别](#documentwrite和innerhtml有何区别)
-- [jQuery.extend和jQuery.fn.extend的区别](#jqueryextend和jqueryfnextend的区别)
-- [针对jQuery性能的优化方法](#针对jquery性能的优化方法)
-- [如何判断当前脚本运行在浏览器还是node环境中](#如何判断当前脚本运行在浏览器还是node环境中)
-- [Canvas和SVG的比较](#canvas和svg的比较)
-- [Ajax的原理](#ajax的原理)
-- [JS事件委托、事件冒泡。](#js事件委托事件冒泡)
-- [IE和Firefox的事件机制有何区别，如何阻止冒泡？](#ie和firefox的事件机制有何区别如何阻止冒泡)
-- [JS内存空间的管理](#js内存空间的管理)
-- [JS执行上下文](#js执行上下文)
-- [JS变量对象详解](#js变量对象详解)
-- [请解释变量提升](#请解释变量提升)
-- [JS作用域及作用域链/闭包（closure），常用场景举例说明](#js作用域及作用域链闭包closure常用场景举例说明)
-- [请简述JS中的this](#请简述js中的this)
-- [JS函数与函数式编程](#js函数与函数式编程)
-- [JS原型，原型链。实现继承的方式](#js原型原型链实现继承的方式)
-- [JS有哪几种创建对象的方式](#js有哪几种创建对象的方式)
-- [请解释事件循环，调用堆栈和任务队列的区别](#请解释事件循环调用堆栈和任务队列的区别)
-- [谈谈对Promise的理解](#谈谈对promise的理解)
-- [ES6知识点](#es6知识点)
-- [防抖与节流](#防抖与节流)
-- [模块化](#模块化)
-- [oAuth实现方案](#oauth实现方案)
-- [如何实现单点登录(Single Sign On)](#如何实现单点登录single-sign-on)
-- [请解释SPA(单页应用)，优缺点是什么？如何使其对SEO友好](#请解释spa单页应用优缺点是什么如何使其对seo友好)
-- [前端性能优化方案](#前端性能优化方案)
-- [正则表达式](#正则表达式)
-- [设计模式举例(实现、应用、优缺点)](#设计模式举例实现应用优缺点)
-- [JS编码规范](#js编码规范)
+## JavaScript篇
 
-<div style="position: fixed; right: 10px; height: 50px;">
-<a href="#js-问题">[[↑] 回到顶部]</a>
-</div>
+- [JavaScript基础](#javascript基础)
+    - [介绍JS的基本数据类型](#介绍js的基本数据类型)
+    - [介绍JS有哪些内置对象](#介绍js有哪些内置对象)
+    - [宿主对象和原生对象的区别](#宿主对象和原生对象的区别)
+    - [null、undefined及未声明变量之间的区别。如何区分？](#nullundefined及未声明变量之间的区别如何区分)
+    - [\==和===的区别](#\和的区别)
+    - [JS隐式转换及应用场景](#js隐式转换及应用场景)
+    - ["Attribute"和"Property"的区别](#attribute和property的区别)
+    - [NaN是什么？如何判断是否是NaN类型](#nan是什么如何判断是否是nan类型)
+    - [如何判断两个对象相等](#如何判断两个对象相等)
+    - [什么是'user strict'，使用它有什么优缺点？](#什么是user-strict使用它有什么优缺点)
+    - [call和apply的作用是什么？两者区别是什么？](#call和apply的作用是什么两者区别是什么)
+    - [请说明Function.prototype.bind的用法](#请说明functionprototypebind的用法)
+    - [如何判断是否为空数组](#如何判断是否为空数组)
+    - [数组方法](#数组方法)
+    - [push、pop、shift、unshift功能及返回值](#pushpopshiftunshift功能及返回值)
+    - [.forEach和.map()循环的主要区别，使用场景举例](#foreach和map循环的主要区别使用场景举例)
+    - [JS执行对象查找时，永远不会去查找原型的函数是哪个？](#js执行对象查找时永远不会去查找原型的函数是哪个)
+    - [如何将arguments转为数组](#如何将arguments转为数组)
+    - [对象的遍历方法](#对象的遍历方法)
+    - [数组的遍历方法](#数组的遍历方法)
+    - [匿名函数的典型应用场景](#匿名函数的典型应用场景)
+    - [IIFE(立即执行函数)的用法](#iife立即执行函数的用法)
+    - [document的load事件和DOMContentLoaded事件之间的区别](#document的load事件和domcontentloaded事件之间的区别)
+    - [数据类型判断方式有几种](#数据类型判断方式有几种)
+    - [DOM操作(增删改查)](#dom操作增删改查)
+    - [异步加载JS 的方式有哪些](#异步加载js-的方式有哪些)
+    - [document.write和innerHTML有何区别](#documentwrite和innerhtml有何区别)
+    - [jQuery.extend和jQuery.fn.extend的区别](#jqueryextend和jqueryfnextend的区别)
+    - [针对jQuery性能的优化方法](#针对jquery性能的优化方法)
+    - [如何判断当前脚本运行在浏览器还是node环境中](#如何判断当前脚本运行在浏览器还是node环境中)
+    - [Canvas和SVG的比较](#canvas和svg的比较)
+    - [Ajax的原理](#ajax的原理)
+    - [JS事件委托、事件冒泡。](#js事件委托事件冒泡)
+    - [IE和Firefox的事件机制有何区别，如何阻止冒泡？](#ie和firefox的事件机制有何区别如何阻止冒泡)
+    - [JS内存空间的管理](#js内存空间的管理)
+    - [JS执行上下文](#js执行上下文)
+    - [JS变量对象详解](#js变量对象详解)
+    - [请解释变量提升](#请解释变量提升)
+    - [JS作用域及作用域链/闭包（closure），常用场景举例说明](#js作用域及作用域链闭包closure常用场景举例说明)
+    - [请简述JS中的this](#请简述js中的this)
+    - [JS函数与函数式编程](#js函数与函数式编程)
+    - [JS原型，原型链。实现继承的方式](#js原型原型链实现继承的方式)
+    - [JS有哪几种创建对象的方式](#js有哪几种创建对象的方式)
+    - [请解释事件循环，调用堆栈和任务队列的区别](#请解释事件循环调用堆栈和任务队列的区别)
+    - [谈谈对Promise的理解](#谈谈对promise的理解)
+    - [ES6知识点](#es6知识点)
+    - [防抖与节流](#防抖与节流)
+    - [模块化](#模块化)
+    - [oAuth实现方案](#oauth实现方案)
+    - [如何实现单点登录(Single Sign On)](#如何实现单点登录single-sign-on)
+    - [请解释SPA(单页应用)，优缺点是什么？如何使其对SEO友好](#请解释spa单页应用优缺点是什么如何使其对seo友好)
+    - [前端性能优化方案](#前端性能优化方案)
+    - [正则表达式](#正则表达式)
+    - [设计模式举例(实现、应用、优缺点)](#设计模式举例实现应用优缺点)
+    - [JS编码规范](#js编码规范)
+- [浏览器相关](#浏览器相关)
+    - [浏览器架构](#浏览器架构)
+    - [浏览器下事件循环(Event Loop)](#浏览器下事件循环event-loop)
+    - [浏览器解析流程](#浏览器解析流程)
+    - [从输入 url 到展示的过程](#从输入-url-到展示的过程)
+    - [功能检测、功能推断、navigator.userAgent的区别](#功能检测功能推断navigatoruseragent的区别)
+    - [浏览器版本检测方式](#浏览器版本检测方式)
+    - [JS同源策略(same-origin policy)](#js同源策略same-origin-policy)
+    - [跨标签页通讯](#跨标签页通讯)
+    - [跨域的解决方案](#跨域的解决方案)
+    - [浏览器数据本地存储方法（localStroage、sessionStroage、cookie、indexedDB）](#浏览器数据本地存储方法localstroagesessionstroagecookieindexeddb)
+    - [Web安全举例](#web安全举例)
+    - [状态码](#状态码)
+    - [Web Worker](#web-worker)
+    - [内存泄露](#内存泄露)
+    - [HTTP缓存机制](#http缓存机制)
+    - [cookie和session的区别](#cookie和session的区别)
+    - [常见兼容性问题(移动端/PC端)](#常见兼容性问题移动端pc端)
+    - [polyfill的作用](#polyfill的作用)
+- [代码相关](#代码相关)
+    - [44个 Javascript 题解析](#44个-javascript-题解析)
+    - [如何实现数组去重](#如何实现数组去重)
+    - [正则实现trim()功能](#正则实现trim功能)
+
+## JavaScript基础
 
 ### 介绍JS的基本数据类型
 string number boolean undefined null
@@ -697,3 +720,205 @@ obj instanceof Object: 左操作数是一个对象，右操作数是一个函数
 
 ### JS编码规范
 - https://github.com/airbnb/javascript
+
+## 浏览器相关
+
+### 浏览器架构
+- 用户界面
+- 主进程
+- 内核
+    - 渲染引擎
+    - JS 引擎
+        - 执行栈
+    - 事件触发线程
+        - 消息队列
+            - 微任务
+            - 宏任务
+    - 网络异步线程
+    - 定时器线程
+
+### 浏览器下事件循环(Event Loop)
+事件循环是指: 执行一个宏任务，然后执行清空微任务列表，循环再执行宏任务，再清微任务列表
+
+- 微任务 microtask(jobs): promise / ajax / Object.observe(该方法已废弃)
+- 宏任务 macrotask(task): setTimout / setInterval / script / IO / UI Rendering
+
+### 浏览器解析流程
+
+![](./img/webkit.png)
+
+ - https://segmentfault.com/a/1190000010298038
+
+### 从输入 url 到展示的过程
+- DNS 解析
+- TCP 三次握手
+- 发送请求，分析 url，设置请求报文(头，主体)
+- 服务器返回请求的文件 (html)
+- 浏览器渲染
+    - HTML parser --> DOM Tree
+        - 标记化算法，进行元素状态的标记
+        - dom 树构建
+    - CSS parser --> Style Tree
+        - 解析 css 代码，生成样式树
+    - attachment --> Render Tree
+        - 结合 dom树 与 style树，生成渲染树
+    - layout: 布局
+    - GPU painting: 像素绘制页面
+
+
+### 功能检测、功能推断、navigator.userAgent的区别
+**功能检测（feature detection）**
+
+功能检测包括确定浏览器是否支持某段代码，以及是否运行不同的代码（取决于它是否执行），以便浏览器始终能够正常运行代码功能，而不会在某些浏览器中出现崩溃和错误。例如：
+
+    if ('geolocation' in navigator) {
+    // 可以使用 navigator.geolocation
+    } else {
+    // 处理 navigator.geolocation 功能缺失
+    }
+Modernizr是处理功能检测的优秀工具。
+
+**功能推断（feature inference）**
+
+功能推断与功能检测一样，会对功能可用性进行检查，但是在判断通过后，还会使用其他功能，因为它假设其他功能也可用，例如：
+
+    if (document.getElementsByTagName) {
+    element = document.getElementById(id);
+    }
+非常不推荐这种方式。功能检测更能保证万无一失。
+
+**UA 字符串**
+
+这是一个浏览器报告的字符串，它允许网络协议对等方（network protocol peers）识别请求用户代理的应用类型、操作系统、应用供应商和应用版本。它可以通过navigator.userAgent访问。 然而，这个字符串很难解析并且很可能存在欺骗性。例如，Chrome 会同时作为 Chrome 和 Safari 进行报告。因此，要检测 Safari，除了检查 Safari 字符串，还要检查是否存在 Chrome 字符串。不要使用这种方式。  
+考虑到历史原因及现代浏览器中用户代理字符串(userAgent)的使用方式，通过用户代理字符串来检测特定的浏览器并不是一件轻松的事情。所以使用用户代理检测是最后的选择。  
+用户代理检测一般适用以下的情形：
+- 不能直接准确的使用功能检测。
+- 同一款浏览器在不同平台下具备不同的能力。这个时候可能就有必要确定浏览器位于哪个平台。
+- 为了跟踪分析等目的需要知道特定的浏览器。
+
+
+
+### 浏览器版本检测方式
+可以使用navigator.userAgent。  
+
+### JS同源策略(same-origin policy)
+同源策略限制了从同一个源加载的文档或脚本如何与来自另一个源的资源进行交互。这是一个用于隔离潜在恶意文件的重要安全机制。  
+
+下表给出了相对http://store.company.com/dir/page.html同源检测的示例:
+
+| URL |	结果 | 原因 |
+| ------ | ------ | ------|
+| http://store.company.com/dir2/other.html	| 成功	| 只有路径不同 |
+| http://store.company.com/dir/inner/another.html | 成功 | 只有路径不同 |
+| https://store.company.com/secure.html	| 失败 | 不同协议 ( https和http )|
+| http://store.company.com:81/dir/etc.html	| 失败	| 不同端口 ( http:// 80是默认的)|
+http://news.company.com/dir/other.html	| 失败	| 不同域名 ( news和store )|
+
+- https://developer.mozilla.org/zh-CN/docs/Web/Security/Same-origin_policy
+
+
+### 跨标签页通讯
+不同标签页间的通讯，本质原理就是去运用一些可以 共享的中间介质，因此比较常用的有以下方法:
+
+- 通过父页面window.open()和子页面postMessage
+    - 异步下，通过 window.open('about: blank') 和 tab.location.href = '*'
+- 设置同域下共享的localStorage与监听window.onstorage
+    - 重复写入相同的值无法触发
+    - 会受到浏览器隐身模式等的限制
+- 设置共享cookie与不断轮询脏检查(setInterval)
+- 借助服务端或者中间层实现
+
+### 跨域的解决方案
+按实际使用量排序(个人理解)：
+- CORS 跨域
+- nginx反向代理
+- WebSockets
+- JSONP 只支持GET请求
+- hash + iframe 只支持GET请求
+- postMessage 只支持GET请求
+- document.domain
+
+- https://lidaguang1989.github.io/2016/09/cors/
+
+### 浏览器数据本地存储方法（localStroage、sessionStroage、cookie、indexedDB）
+目前常见的存储方式为以下三种：
+ - Cookie
+ - web存储 (locaStorage和seesionStorage)
+ - IndexedDB
+
+![](./img/browser_storage.png)
+
+在H5出现之前，数据都是存储在cookie中的。为了解决cookie的局限性引入了Web存储，indexedDB用于客户端存储大量结构化数据(包括, 文件/ blobs)。
+
+
+
+**共同点**：都是保存在浏览器端、且同源的  
+**区别**：
+
+| | Cookie | localStorage | sessionStorage | indexedDB |
+| --- | --- | --- | --- | --- |
+| 容量大小 | 4kb左右 | 5M左右 | 5M左右 | 无限容量 |
+| 过期时间 | 只在设置的过期时间之前一直有效，<br>即使窗口或者浏览器关闭  | 始终有效 | 当前浏览器窗口关闭前有效 | 始终有效 |
+| 存储方式 | 浏览器和服务器间来回传递  | 本地保存 | 本地保存 | 本地保存 |
+| 作用域 | 在同源窗口中共享 | 在同源窗口中共享 | 在同源窗口并且同一窗口中共享 | 在同源窗口中共享 |
+
+
+### Web安全举例
+ - XSS(跨站脚本攻击)几种形式，防范手段，过滤哪些字符
+ - csrf(跨站请求伪造)原理，实现，防范手段
+ - sql注入
+ - 命令行注入
+ - DDoS(Distributed Denial of Service) 又叫分布式拒绝服务 
+ - 流量劫持
+    DNS劫持
+    HTTP劫持
+ - 服务器漏洞
+
+ - https://juejin.im/entry/5a559dd36fb9a01c9e45d896
+
+### 状态码
+ - https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status
+
+
+### Web Worker
+现代浏览器为JavaScript创造的 多线程环境。可以新建并将部分任务分配到worker线程并行运行，两个线程可 独立运行，互不干扰，可通过自带的 消息机制 相互通信。
+
+**限制:**
+- 同源限制
+- 无法使用 document / window / alert / confirm
+- 无法加载本地资源
+
+### 内存泄露
+- 意外的全局变量: 无法被回收
+- 定时器: 未被正确关闭，导致所引用的外部变量无法被释放
+- 事件监听: 没有正确销毁 (低版本浏览器可能出现)
+- 闭包: 会导致父级中的变量无法被释放
+- dom 引用: dom 元素被删除时，内存中的引用未被正确清空
+
+可用 chrome 中的 timeline 进行内存标记，可视化查看内存的变化情况，找出异常点。
+
+### HTTP缓存机制
+- https://www.cnblogs.com/chenqf/p/6386163.html
+
+### cookie和session的区别
+- https://www.zhihu.com/question/19786827
+
+### 常见兼容性问题(移动端/PC端)
+
+### polyfill的作用
+- https://zhuanlan.zhihu.com/p/27777995
+
+## 代码相关
+
+### 44个 Javascript 题解析
+https://lidaguang1989.github.io/2018/01/javascript-puzzlers/
+
+### 如何实现数组去重
+- https://segmentfault.com/a/1190000016418021
+
+### 正则实现trim()功能
+    function myTrim(str) {
+    let reg = /^\s+|\s+$/g;
+    return str.replace(reg, "");
+    }
+    console.log(myTrim('    asdf    '));
