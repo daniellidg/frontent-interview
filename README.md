@@ -3,4 +3,4 @@
 
 随时更新中...
 
-- ### [JavaScript篇](https://github.com/lidaguang1989/frontent-interview/blob/master/javascript.md)# fontend
+- ### [JavaScript篇](https://github.com/lidaguang1989/frontent-interview/blob/master/javascript.md)

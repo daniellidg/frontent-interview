@@ -126,6 +126,7 @@ JS在使用运算符号或者对比符时，会自带隐式转换，规则如下
 - {}.toString() === '[object object]'
 - NaN !== NaN 、+undefined 为 NaN
 
+参考: 
 - https://juejin.im/post/5a7172d9f265da3e3245cbca
 
 ### "Attribute"和"Property"的区别
@@ -279,6 +280,7 @@ forEach用法:
 
     Object​.prototype​.has​OwnProperty()
 
+参考：
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty
 
 ### 如何将arguments转为数组
@@ -348,6 +350,8 @@ IIFE（ 立即调用函数表达式）是一个在定义时就会立即执行的
 这是一个被称为 自执行匿名函数 的设计模式，主要包含两部分。第一部分是包围在 圆括号运算符 () 里的一个匿名函数，这个匿名函数拥有独立的词法作用域。这不仅避免了外界访问此 IIFE 中的变量，而且又不会污染全局作用域。
 
 第二部分再一次使用 () 创建了一个立即执行函数表达式，JavaScript 引擎到此将直接执行函数。
+
+参考：
  - https://developer.mozilla.org/en-US/docs/Glossary/IIFE
 
 ### document的load事件和DOMContentLoaded事件之间的区别
@@ -483,6 +487,7 @@ obj instanceof Object: 左操作数是一个对象，右操作数是一个函数
         Document.querySelector() // 返回文档中匹配指定的CSS选择器的第一元素
         Document.querySelectorAll() // 返回与指定的选择器组匹配的文档中的元素列表
 
+参考：
 - https://developer.mozilla.org/zh-CN/docs/Web/API/Document_Object_Model
 
 ### 异步加载JS 的方式有哪些
@@ -618,6 +623,7 @@ obj instanceof Object: 左操作数是一个对象，右操作数是一个函数
 5. 利用原型方式创建
 6. 利用构造函数和原型的组合模式创建
 
+参考：
 - https://juejin.im/post/5b150fcf518825139b18de11
 
 ### 请解释事件循环，调用堆栈和任务队列的区别
@@ -640,6 +646,7 @@ obj instanceof Object: 左操作数是一个对象，右操作数是一个函数
 6. class
 7. Promise
 
+参考：
 - https://segmentfault.com/a/1190000012646425
 - http://es6.ruanyifeng.com/
 
@@ -706,6 +713,7 @@ obj instanceof Object: 左操作数是一个对象，右操作数是一个函数
 |开发成本| 较高，常需借助专业的框架 | 较低，但页面重复代码多|
 |维护成本| 相对容易 | 相对复杂|
 
+参考：
 - https://juejin.im/post/5a0ea4ec6fb9a0450407725c
 
 ### 前端性能优化方案
@@ -814,6 +822,7 @@ Modernizr是处理功能检测的优秀工具。
 | http://store.company.com:81/dir/etc.html	| 失败	| 不同端口 ( http:// 80是默认的)|
 http://news.company.com/dir/other.html	| 失败	| 不同域名 ( news和store )|
 
+参考：
 - https://developer.mozilla.org/zh-CN/docs/Web/Security/Same-origin_policy
 
 
@@ -838,6 +847,7 @@ http://news.company.com/dir/other.html	| 失败	| 不同域名 ( news和store )|
 - postMessage 只支持GET请求
 - document.domain
 
+参考：
 - https://lidaguang1989.github.io/2016/09/cors/
 
 ### 浏览器数据本地存储方法（localStroage、sessionStroage、cookie、indexedDB）
@@ -874,6 +884,7 @@ http://news.company.com/dir/other.html	| 失败	| 不同域名 ( news和store )|
     HTTP劫持
  - 服务器漏洞
 
+参考：
  - https://juejin.im/entry/5a559dd36fb9a01c9e45d896
 
 ### 状态码
@@ -911,7 +922,7 @@ http://news.company.com/dir/other.html	| 失败	| 不同域名 ( news和store )|
 ## 代码相关
 
 ### 44个 Javascript 题解析
-https://lidaguang1989.github.io/2018/01/javascript-puzzlers/
+- https://lidaguang1989.github.io/2018/01/javascript-puzzlers/
 
 ### 如何实现数组去重
 - https://segmentfault.com/a/1190000016418021
