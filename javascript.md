@@ -55,6 +55,7 @@
     - [前端性能优化方案](#前端性能优化方案)
     - [正则表达式](#正则表达式)
     - [设计模式举例(实现、应用、优缺点)](#设计模式举例实现应用优缺点)
+    - [前端常用框架对比](#前端常用框架对比)
     - [JS编码规范](#js编码规范)
 - [浏览器相关](#浏览器相关)
     - [浏览器架构](#浏览器架构)
@@ -77,6 +78,7 @@
     - [polyfill的作用](#polyfill的作用)
 - [代码相关](#代码相关)
     - [44个 Javascript 题解析](#44个-javascript-题解析)
+    - [43个 javascript 进阶问题列表](#43个-javascript-进阶问题列表)
     - [如何实现数组去重](#如何实现数组去重)
     - [正则实现trim()功能](#正则实现trim功能)
 
@@ -180,7 +182,7 @@ JS在使用运算符号或者对比符时，会自带隐式转换，规则如下
 
 总的来说，我认为利大于弊，我从来不使用严格模式禁用的功能，因此我推荐使用严格模式。
 
-### call和apply的作用是什么？两者区别是什么？
+### call, apply和bind的作用是什么？两者区别是什么？
 .call和.apply都用于调用函数，第一个参数将用作函数内 this 的值。然而，.call接受逗号分隔的参数作为后面的参数，而.apply接受一个参数数组作为后面的参数。一个简单的记忆方法是，从call中的 C 联想到逗号分隔（comma-separated），从apply中的 A 联想到数组（array）。
 
     function add(a, b) {
@@ -190,6 +192,18 @@ JS在使用运算符号或者对比符时，会自带隐式转换，规则如下
     console.log(add.call(null, 1, 2)); // 3
     console.log(add.apply(null, [1, 2])); // 3
 
+.call和.apply是立即执行的, .bind 返回函数的副本，但带有绑定上下文！它不是立即执行的。
+
+    const person = { name: 'Lydia' }
+
+    function sayHi(age) {
+    console.log(`${this.name} is ${age}`)
+    }
+
+    sayHi.call(person, 21)
+    sayHi.bind(person, 21)
+
+    结果: Lydia is 21 function
 
 ### 请说明Function.prototype.bind的用法
 摘自MDN：
@@ -213,7 +227,7 @@ JS在使用运算符号或者对比符时，会自带隐式转换，规则如下
 
 ### 数组方法
 - map: 遍历数组，返回回调返回值组成的新数组
-- forEach: 无法break，可以用try/catch中throw new Error来停止
+- forEach: **无法break**，可以用try/catch中throw new Error来停止
 - filter: 过滤
 - some: 有一项返回true，则整体为true
 - every: 有一项返回false，则整体为false
@@ -726,6 +740,9 @@ obj instanceof Object: 左操作数是一个对象，右操作数是一个函数
 ### 设计模式举例(实现、应用、优缺点)
 - https://juejin.im/post/5c2e10a76fb9a049c0432697
 
+### 前端常用框架对比
+- https://cn.vuejs.org/v2/guide/comparison.html
+
 ### JS编码规范
 - https://github.com/airbnb/javascript
 
@@ -923,6 +940,9 @@ http://news.company.com/dir/other.html	| 失败	| 不同域名 ( news和store )|
 
 ### 44个 Javascript 题解析
 - https://lidaguang1989.github.io/2018/01/javascript-puzzlers/
+
+### 43个 javascript 进阶问题列表
+https://github.com/lydiahallie/javascript-questions/blob/master/README-zh_CN.md
 
 ### 如何实现数组去重
 - https://segmentfault.com/a/1190000016418021
