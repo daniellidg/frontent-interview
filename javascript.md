@@ -11,7 +11,7 @@
     - [NaN是什么？如何判断是否是NaN类型](#nan是什么如何判断是否是nan类型)
     - [如何判断两个对象相等](#如何判断两个对象相等)
     - [什么是'user strict'，使用它有什么优缺点？](#什么是user-strict使用它有什么优缺点)
-    - [call和apply的作用是什么？两者区别是什么？](#call和apply的作用是什么两者区别是什么)
+    - [call, apply和bind的作用是什么？两者区别是什么？](#callapply和bind的作用是什么两者区别是什么)
     - [请说明Function.prototype.bind的用法](#请说明functionprototypebind的用法)
     - [如何判断是否为空数组](#如何判断是否为空数组)
     - [数组方法](#数组方法)
