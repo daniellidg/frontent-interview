@@ -11,7 +11,7 @@
     - [NaN是什么？如何判断是否是NaN类型](#nan是什么如何判断是否是nan类型)
     - [如何判断两个对象相等](#如何判断两个对象相等)
     - [什么是'user strict'，使用它有什么优缺点？](#什么是user-strict使用它有什么优缺点)
-    - [call, apply和bind的作用是什么？两者区别是什么？](#callapply和bind的作用是什么两者区别是什么)
+    - [call,apply和bind的作用是什么？两者区别是什么？](#callapply和bind的作用是什么两者区别是什么)
     - [请说明Function.prototype.bind的用法](#请说明functionprototypebind的用法)
     - [如何判断是否为空数组](#如何判断是否为空数组)
     - [数组方法](#数组方法)
@@ -182,7 +182,7 @@ JS在使用运算符号或者对比符时，会自带隐式转换，规则如下
 
 总的来说，我认为利大于弊，我从来不使用严格模式禁用的功能，因此我推荐使用严格模式。
 
-### call, apply和bind的作用是什么？两者区别是什么？
+### call,apply和bind的作用是什么？两者区别是什么？
 .call和.apply都用于调用函数，第一个参数将用作函数内 this 的值。然而，.call接受逗号分隔的参数作为后面的参数，而.apply接受一个参数数组作为后面的参数。一个简单的记忆方法是，从call中的 C 联想到逗号分隔（comma-separated），从apply中的 A 联想到数组（array）。
 
     function add(a, b) {
