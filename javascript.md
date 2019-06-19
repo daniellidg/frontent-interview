@@ -108,10 +108,10 @@ string number boolean undefined null
         false == '0' // true
 - ===会比较数值和类型。例如：
 
-        12 == '12' // false
-	    12 == 12 // true
-	    true == 1 // false
-	    false == '0' // false
+        12 === '12' // false
+	    12 === 12 // true
+	    true === 1 // false
+	    false === '0' // false
 
 ### JS隐式转换及应用场景
 JS在使用运算符号或者对比符时，会自带隐式转换，规则如下:
