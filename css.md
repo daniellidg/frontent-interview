@@ -96,13 +96,18 @@ p:first-child {color: red}
 
 ### rgba() 与 opacity的区别
 - **rgba()**
+
     - 仅仅改变的是背景的透明度
     - 不会对文本造成影响，不具有继承性
-    ![](./img/css/rgba.png)
+    
+    ![](./img/rgba.png)
+    
 - **opacity**
+
     - 不仅会改变背景的透明度
     - 还会改变文本的透明度，并且具有继承性
-    ![](./img/css/opacity.png)
+    
+    ![](./img/opacity.png)
 
 ### 盒模型的理解
 页面渲染时，dom 元素所采用的 布局模型。可通过box-sizing进行设置。
