@@ -903,6 +903,7 @@ http://news.company.com/dir/other.html	| 失败	| 不同域名 ( news和store )|
 
 参考：
  - https://juejin.im/entry/5a559dd36fb9a01c9e45d896
+ - https://www.jianshu.com/p/13a1b955d095
 
 ### 状态码
  - https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status
